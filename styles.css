@@ -1,0 +1,254 @@
+/* a4stylesheet.css
+   A4: Intro CSS Fill-in Template
+   Instructions: rename this file to styles.css and complete each TODO block.
+*/
+
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #273cb2;
+  background: #fff;
+}
+
+/* FIXED TODO A: Removed nesting. Added flexbox to the correct class layout container */
+.header-inner {
+  display: flex;                  
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 20px 0;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* FIXED TODO B: Targeted the actual span/dot rather than nesting a new class */
+.brand .dot {
+  color: #0076ff;
+}
+
+.site-nav a {
+  margin-left: 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+/* ===== Hero ===== */
+/* FIXED TODO C: Added background image settings properly onto the designated class */
+.hero {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                    url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FIXED TODO D: Centered content on the actual container */
+.hero-content {
+  text-align: center;
+  padding: 40px 20px; 
+}
+
+/* FIXED TODO E: Typography sizing on the true element */
+.hero h1 {
+  margin: 0 0 15px 0;
+  font-size: 46px;              
+  text-transform: uppercase;    
+  letter-spacing: 1px;          
+}
+
+/* FIXED TODO F: Adjusted typography colors and margins natively */
+.hero-subhead {
+  margin: 0 0 30px 0;
+  font-size: 22px;      
+  color: #555555;       
+  font-weight: 300;     
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+/* FIXED TODO G: Correctly targeted the dark button state */
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+/* FIXED TODO H: Correctly targeted the outline button state */
+.btn-outline {
+  background: transparent;
+  color: #0076ff;
+  border: 2px solid #0076ff;
+}
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 42px 0;
+}
+
+/* FIXED TODO I & J: Removed the broken desktop breakpoint wrapper, configured layout grid */
+.features-grid {
+  display: flex;     
+  gap: 26px;         
+  flex-wrap: wrap; /* Allows stacking beautifully on smaller mobile screens */
+}
+
+.feature {
+  flex: 1;            
+  text-align: center; 
+  min-width: 250px; /* Keeps items stable on smaller views */
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #ddd;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #666;
+  font-size: 22px;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 0 36px;
+  background: #f7f7f7;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #666;
+  font-size: 13px;
+}
+
+.media {
+  background: #eaeaea;
+  border: 1px solid #ddd;
+  height: 260px;
+  display: grid;
+  place-items: center;
+}
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 34px 0 44px;
+}
+
+/* FIXED TODO K: Aligned structural containers into flex grids */
+.secondary-grid {
+  display: flex;   
+  gap: 26px;       
+  flex-wrap: wrap;
+}
+
+/* FIXED TODO L: Set card structures without structural mixing */
+.card {
+  flex: 1;                  
+  border: 1px solid #eee;   
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-text {
+  padding: 18px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* FIXED TODO M: Applied sizing to fill card areas seamlessly */
+.card-image {
+  min-height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional images (already provided) */
+.img-a {
+  background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60");
+}
+.img-b {
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=60");
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #f7f7f7;
+  padding: 42px 0;
+}
+
+/* FIXED TODO N: Simple and direct layout rules */
+.cta-inner {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+}
+
+/* TODO O (Footer layout optional completion): */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
